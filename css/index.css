@@ -64,25 +64,36 @@ h1, h2, h3, h4, h5 {
 }
 
 /* Copy and paste your work from yesterday here and start to refactor into flexbox */
+*{
+  max-width: 100%;
+
+}
 .container{
-	width:900px;
-	margin:0 auto;
+  max-width: 100%;
+  margin: 0 10% 0 10%;
 
 	
 }
 header nav {
-display:flex;
-justify-content: space-around;
-margin-top: 10px;
-	
-	
 
+display: flex;
+justify-content: space-between;
+}
+.links{
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 5% 0 5%;
+}
+.logo{
+  margin:0 5% 0 5%;
 }
 header nav a{
 	/*TL BR*/
-	margin: 0 32px;
-	color:slategray;
-	text-decoration:none;
+  text-decoration: none;
+  color: gray;
+  text-align: center;
 	
 }
 
@@ -98,12 +109,21 @@ padding:40px;
 }
 
 .text1 {
-	width:30%;
+ 
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
 	
 }
+.midcode{
+  max-width: 100%;
+}
+.coding{
+  width: 100%;
+}
+
+
+
 button{
 	
 	white-space: nowrap;
@@ -114,12 +134,10 @@ button{
 	
 }
 .button{
-    margin-left: 20%;
-    margin-bottom: 20%;
-	
-	
-
+margin-left: 29%;
+margin-bottom: 15%;
 }
+
 div h1{	
 	
 	font-size:80px;
@@ -143,8 +161,7 @@ h4{
 	padding-top: 20px;
 }
 
-div .middle {
-}
+
 .topblock{
 	width:40%;
 	
@@ -166,11 +183,8 @@ img .coding {
 	font-family: 'Baskervville', serif;
 	
 }
-.inlineblock{
-
-	
-	width:33%;
-	padding:20px;
+.middleblock{
+padding:20px;
 
 }
 address{
@@ -182,43 +196,113 @@ footer{
 	text-align:center;
 
 }
-
-/*media queries start here!*/
-@media (max-width: 900px){
-    nav{
-      flex-direction:column-reverse;
-      align-items:center;
-    }
-    .links{
-      width:100%;
-    }
-    .logo{
-      margin:2% 0;
-    }
-    .cta{
-      justify-content:center;
-    }
-    .ctaImg{
-      display:none;
-    }
-    footer{
-      text-align:center;
-    }
-  }
-
-  @media (max-width: 500px){
-    h1{
-      font-size:4rem;
-    }
-    .container{
-        flex-direction: column;
-    }
-    nav{
-      flex-direction:column-reverse;
-      align-items:center;
-    }
-    .links{
-      flex-direction:column;
-    }
-  }
 /* services start here!*/
+/*Responsive code*/
+
+/*900PX HERE*/
+
+@media (max-width: 900px) {
+  nav {
+    flex-direction: column-reverse;
+    display: flex;
+  }
+
+  nav .links {
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3%;
+  }
+
+  nav .img {
+    justify-content: center;
+    margin: 0 0 40px;
+  }
+ .text1 {
+    width: 100%;
+
+  }
+
+.stubborn {
+	  display: none;
+  }
+ 
+.nogologo{
+ margin: 0 auto;
+ padding-top: 1%;
+
+}
+.button{
+margin: 5% auto;
+}
+
+}
+
+
+  /* 500PX HERE*/
+  @media (max-width: 500px) {
+	body {
+    margin: 40px 20px;
+  }
+  .container{
+    width: 90%;
+  }
+
+  .text1{
+    width: 100%;
+
+  }
+  .stubborn {
+	  display: none;
+	}
+	nav .links {
+	  flex-direction: column;
+  }
+
+	nav .links * {
+	  font-size: 20px;
+	  padding: 20px 0;
+	  width: 100%;
+	  border-bottom: 1px solid gray;
+	}
+  
+	nav .img {
+	  margin: 0;
+	  padding: 20px 0;
+	  border-bottom: 1px solid gray;
+	}
+  h1{
+    display: flex;
+    font-size: 1.2rem;
+    text-align: center;
+    
+  }
+  
+  
+	section {
+	 flex-direction: column;
+  }
+  .topblock{
+   width: 90%;
+   padding: 1%;
+  }
+  p {
+  
+    font-size: 1rem;
+
+  }
+	.middle {
+   flex-direction: column;
+  
+  }
+  .middleblock{
+  
+    padding: 1%;
+  }
+  
+	.bottom {
+    flex-direction: column;
+	  width: 100%;
+
+	}
+  }
